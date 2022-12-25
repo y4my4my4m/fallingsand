@@ -6,7 +6,7 @@ MAP_WIDTH = 100
 MAP_HEIGHT = 100
 
 # The size of each tile (in pixels)
-TILE_SIZE = 6
+TILE_SIZE = 5
 
 # The possible materials for each tile
 AIR = 0
@@ -15,7 +15,7 @@ WATER = 2
 SAND = 3
 
 # The delay before a tile can be updated again (in simulation steps)
-UPDATE_DELAY = 1
+UPDATE_DELAY = 0
 
 # The array that stores the map
 map_array = [[AIR for _ in range(MAP_WIDTH)] for _ in range(MAP_HEIGHT)]
@@ -31,14 +31,14 @@ screen = pygame.display.set_mode((MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE)
 pygame.display.set_caption('Falling Sand')
 
 # Initialize the map with some walls and water
-for i in range(50):
-    map_array[i][0] = WALL
+# for i in range(50):
+#     map_array[i][0] = WALL
 
 map_array[50][0] = WATER
 
 # Set the colors for each material
 colors = {
-    AIR: (20, 20, 20),
+    AIR: (80, 80, 80),
     WALL: (0, 0, 0),
     WATER: (10, 10, 240),
     SAND: (225, 215, 40),
